@@ -1,0 +1,141 @@
+####Analysis with cpptraj####
+#Load topology file
+parm ./../1.min/*.prmtop 
+#Load coordinate file (post-production.nc)
+trajin ./../2.prod/*.nc
+center
+image familiar
+trajout pTIP
+
+######################
+#    DISTANCES       #
+######################
+
+######
+#pTIP#
+######
+#distance between O°-Cu in T and P respectively as a function of time (in ns)
+distance TIP_T-P :LTL@O :IPX@Cu21 out pTIP_distOCu.dat time 1.0
+
+#distance between O°-N in T and I respectively as a function of time (in ns)
+distance TIP_T-I :LTL@O :LIP@N15 out pTIP_distON.dat time 1.0
+
+#distance between N-Cu in I and P respectively as a function of time (in ns)
+distance TIP_I-P :LIP@N15 :IPX@Cu21 out pTIP_distNCu.dat time 1.0
+
+#######
+#pKTIP#
+#######
+#distance between O°-Cu in T and P respectively as a function of time (in ns) 
+distance KTIP_T-P :KTL@O :IPX@Cu21 out pKTIP_distOCu.dat time 1.0
+
+#distance between O°-N in T and I respectively as a function of time (in ns)
+distance KTIP_T-I :KTL@O :LIP@N15 out pKTIP_distON.dat time 1.0
+
+#distance between N-Cu in I and P respectively as a function of time (in ns)
+distance KTIP_I-P :LIP@N15 :IPX@Cu21 out pKTIP_distNCu.dat time 1.0
+
+#######
+#pTKIP#
+#######
+#distance between O°-Cu in T and P respectively as a function of time (in ns)
+distance TKIP_T-P :LTL@O :IPX@Cu21 out pTKIP_distOCu.dat time 1.0
+
+#distance between O°-N in T and I respectively as a function of time (in ns)
+distance TKIP_T-I :LTL@O :KIP@N15 out pTKIP_distON.dat time 1.0
+
+#distance between N-Cu in I and P respectively as a function of time (in ns)
+distance TKIP_I-P :KIP@N15 :IPX@Cu21 out pTKIP_distNCu.dat time 1.0
+
+######
+#pITP#
+######
+#distance between O°-Cu in T and P respectively as a function of time (in ns)
+distance ITP_T-P :LTP@O :TPX@Cu21 out pITP_distOCu.dat time 1.0
+
+#distance between O°-N in T and I respectively as a function of time (in ns)
+distance ITP_I-T :LIL@N4 :LTP@O out pITP_distNO.dat time 1.0
+
+#distance between N-Cu in I and P respectively as a function of time (in ns)
+distance ITP_I-P :LIL@N4 :TPX@Cu21 out pITP_distNCu.dat time 1.0
+
+#######
+#pKITP#
+#######
+#distance between O°-Cu in T and P respectively as a function of time (in ns)
+distance KITP_T-P :LTP@O :TPX@Cu21 out pKITP_distOCu.dat time 1.0
+
+#distance between O°-N in T and I respectively as a function of time (in ns)
+distance KITP_I-T :KIL@N4 :LTP@O out pKITP_distNO.dat time 1.0
+
+#distance between N-Cu in I and P respectively as a function of time (in ns)
+distance KITP_I-P :KIL@N4 :TPX@Cu21 out pKITP_distNCu.dat time 1.0
+
+#######
+#pIKTP#
+#######
+#distance between O°-Cu in T and P respectively as a function of time (in ns)
+distance IKTP_T-P :KTP@O :TPX@Cu21 out pIKTP_distOCu.dat time 1.0
+
+#distance between O°-N in T and I respectively as a function of time (in ns)
+distance IKTP_I-T :LIL@N4 :KTP@O out pIKTP_distNO.dat time 1.0
+
+#distance between N-Cu in I and P respectively as a function of time (in ns)
+distance IKTP_I-P :LIL@N4 :TPX@Cu21 out pIKTP_distNCu.dat time 1.0
+
+######################
+#       ANGLES       #
+######################
+######
+#pTIP#
+######
+#angle between residues O, N free and Cu in T,I,P respectively, using center of mass of atoms, as a function of time (in ns)
+angle aTIP ':LTL@O' ':LIP@N15' ':IPX@Cu21' out pTIP_angle_ONCu.dat mass time 1.0
+
+#######
+#pKTIP#
+#######
+#angle between residues O, N free and Cu in T,I,P respectively, using center of mass of atoms, as a function of time (in ns)
+angle aKTIP ':KTL@O' ':LIP@N15' ':IPX@Cu21' out pKTIP_angle_ONCu.dat mass time 1.0
+
+#######
+#pTKIP#
+#######
+#angle between residues O, N free and Cu in T,I,P respectively, using center of mass of atoms, as a function of time (in ns)
+angle aTKIP ':KTL@O' ':KIP@N15' ':IPX@Cu21' out pTKIP_angle_ONCu.dat mass time 1.0
+
+######
+#pITP#
+######
+#angle between residues O, N free and Cu in T,I,P respectively, using center of mass of atoms, as a function of time (in ns)
+angle aITP ':LTP@O' ':LIL@N4' ':TPX@Cu21' out pITP_angle_NOCu.dat mass time 1.0
+
+#######
+#pKITP#
+#######
+#angle between residues O, N free and Cu in T,I,P respectively, using center of mass of atoms, as a function of time (in ns)
+angle aKITP ':LTP@O' ':KIL@N4' ':TPX@Cu21' out pKITP_angle_NOCu.dat mass time 1.0
+
+#######
+#pIKTP#
+#######
+#angle between residues O, N free and Cu in T,I,P respectively, using center of mass of atoms, as a function of time (in ns)
+angle aIKTP ':KTP@O' ':LIL@N4' ':TPX@Cu21' out pIKTP_angle_NOCu.dat mass time 1.0
+
+##################################################
+#        RMSD        # nofit only when restraints#
+##################################################
+#Mass-weighted RMSD using all non-hydrogen atoms in TIP residues, using the 1st trajectory frame processed as reference
+rmsd RMSD_noH nofit first mass time 1.0 out rmsd_test.dat ':1&!@H='
+
+######################
+#        RMSF        #
+######################
+#Mass-weighted RMSF of all non-hydrogen atoms per residue
+atomicfluct RMSF_noH out rmsf_byres_noH.dat *&!@H= byres
+
+######################
+#         Rg         #
+######################
+#Mass-weighted Radius of gyration of all non-hydrogen atoms
+radgyr RoG *&!@H= out rog_noH.dat mass
