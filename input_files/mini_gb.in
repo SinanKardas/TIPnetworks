@@ -1,0 +1,22 @@
+Minimizing the system, 1000 steps of
+steepest descent and 9000 of conjugated gradient
+&cntrl
+imin=1,		! Minimize the initial structure
+ntx=1,		! Read input coordinates
+irest=0,	! Run as a new simulation
+ntpr=50,	! Print to mdout every ntpr steps
+ntf=1,		! Complete force evaluation
+ntb=0,		! No periodic boundary is applied
+cut=9999.0,	! Infinite cut-off in Angstroms
+nsnb=5,		! Update of pair list frequency
+maxcyc=10000,	! Maximum minimization cycles
+ncyc=1000,	! Steepest descent algorithm for the first ncyc cycles, then switches the conjugate gradient algorithm for maxcyc-ncyc cycles
+ntmin=1,	! Method of minimization: steepest descent method is used then conjugate gradient is switched on
+ioutfm=1,	! Write trajectory file in NetCDF format
+igb=1,		! Standard pairwise generalized Born implicit solvation using the default radii set up by LeaP
+extdiel=37.5,   ! External dielectric constant (solvent:ACN)
+&end
+&ewald
+ew_type = 0, skinnb = 2.0,
+&end
+

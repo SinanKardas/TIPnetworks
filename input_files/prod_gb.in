@@ -1,0 +1,28 @@
+Production, 500ns, using Langevin thermostat and Standard pairwise generalized Born implicit solvation
+&cntrl
+    imin=0,		 	! Perform MD
+    ntx=1,			! Read input coordinates
+    ntpr=1000000,	 	! Print to mdout every ntpr steps
+    ntwr=1000000,	 	! Write a restart file every ntwr steps
+    ntwx=1000000,	 	! Write to trajectory file every ntwx steps
+    ntwe=1000000,		! Energy and Temperature written in the mden file every ntwe steps
+    nscm=1,			! Center of mass motion removal interval (timesteps). System is recentered
+    ntf=1,		 	! Complete force evaluation
+    ntc=1,		 	! No SHAKE on bonds between hydrogens
+    ntb=0,		 	! No periodic boundary is applied
+    nstlim=500000000,	 	! Number of MD steps 
+    t=0.0, dt=0.001,	 	! Time at the start (ps), Timesteps (ps)
+    cut=9999.0,		 	! Infinite (nonbonded) cut-off in Angstroms
+    ntt=3, gamma_ln=1.0, 	! Langevin thermostat, Langevin collision frequency
+    tempi=300.0, temp0=300.0,	! Initialize velocities from Maxwellian distribution, Initial and Final Temperature set at 300 K
+    ntr=0,			! Do not apply position restraints
+    ntp=0,			! No pressure scaling
+    irest=0,			! Do not restart calculation from input file
+    ioutfm=1,			! Write trajectory file in NetCDF binary format
+    igb=1,			! Standard pairwise generalizd Born implicit solvation
+    extdiel=37.5,               ! External dielectric constant (solvent:ACN)
+    ig=-1,			! Use random seed from current time
+&end
+&ewald
+ ew_type = 0, skinnb = 2.0,
+ &end
