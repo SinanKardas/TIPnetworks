@@ -1,0 +1,40 @@
+Copper parameters update (DFT calculation 14/01/19)
+MASS
+Cu  63.55        0.000              calculated with DFT (B3LYP)
+i  126.90        0.000               calculated with DFT (B3LYP)
+
+BOND
+n -Cu    200.00   2.0492               more or less same n-X / calculated with DFT (B3LYP)
+nb-Cu    300.00   2.2871               more or less same nb-X / calculated with DFT (B3LYP)
+Cu-i     100.00   2.4494               calculated with DFT (B3LYP)
+
+ANGLE
+n -ca-ha   65.427     122.5148       same as ha-ca-n2 / calculated with DFT (B3LYP) 
+n -n -Cu   50.000     132.7090       more or less same as cc-n -n  / calculated with DFT (B3LYP)
+n -Cu-nb   50.000      76.5001       calculated with DFT (B3LYP)
+n -Cu-i    50.000     164.3825       calculated with DFT (B3LYP)
+ca-n -Cu   50.000     116.9592       calculated with DFT (B3LYP)
+ca-nb-Cu   50.000     127.7540       more or less same as cp-ca-nb / calculated with DFT (B3LYP)
+nb-ca-ha   52.980     115.4759       same as ha-ca-n2 / calculated with DFT (B3LYP)
+nb-Cu-i    50.000     119.1169       more or less same nb-X-X / calculated with DFT (B3LYP)
+
+DIHE
+n -n -Cu-nb   1   10.000      -179.9136           2.000      calculated with DFT (B3LYP)
+n -n -Cu-i    1    5.000         0.4965           2.000      calculated with DFT (B3LYP)
+n -Cu-nb-ca   1    8.000      -179.9381           2.000      calculated with DFT (B3LYP)
+ca-n -Cu-nb   1   12.000        -0.0708           2.000      calculated with DFT (B3LYP)
+ca-n -Cu-i    1    5.000      -179.6607           2.000      calculated with DFT (B3LYP)
+ca-nb-Cu-i    1    8.000        -0.0645           2.000      calculated with DFT (B3LYP)
+
+IMPROPER
+c3-ca-n -n          1.1          180.0         2.0          Using default value
+Cu-ca-n -n          1.1          180.0         2.0          Using default value
+ca-ca-ca-n          1.1          180.0         2.0          Using default value
+ca-ha-ca-n          1.1          180.0         2.0          General improper torsional angle (2 general atom types)
+ca-ca-ca-nb         1.1          180.0         2.0          Using default value
+ca-ca-ca-ha         1.1          180.0         2.0          General improper torsional angle (2 general atom types)
+ca-ha-ca-nb         1.1          180.0         2.0          General improper torsional angle (2 general atom types)
+
+NONBON
+Cu          1.2    0.05             from parm91X
+i           2.35   0.40             from parm91X

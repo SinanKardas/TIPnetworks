@@ -1,0 +1,154 @@
+Nitroxides parameters update of ff99SB (2009)
+
+MASS
+ON  16.00
+NN  14.01
+HN  1.008
+CI  12.01
+CE  12.01
+CF  12.01
+CX  12.01
+CP  12.01
+CT  12.01
+LP   9.00
+
+BOND
+ON-NN    360.00     1.258
+CT-NN    370.00     1.477
+CI-NN    370.00     1.485
+CX-NN    370.00     1.340
+CP-NN    370.00     1.477
+CF-NN    428.00     1.390
+CT-HN    340.00     1.090
+C -CI    317.00     1.550
+C -CP    317.00     1.522
+CI-CA    317.00     1.510
+CX-CT    317.00     1.455
+CI-CT    310.00     1.526
+CP-CT    310.00     1.526
+C -CE    447.00     1.460
+CF-CE    447.00     1.400
+CF-CA    469.00     1.400
+CE-CA    469.00     1.404
+LP-ON    325.00     0.450
+c- CT    243.22     1.524  
+
+ANGLE
+ON-NN-CT    82.00    117.50
+ON-NN-CP    82.00    117.50
+ON-NN-CF    82.00    121.50
+ON-NN-CI    82.00    118.50
+ON-NN-CX    82.00    120.00
+CI-C -O     80.00    120.40
+CP-C -O     80.00    120.40
+CE-C -O     80.00    128.80
+NN-CF-CA    70.00    132.80
+C -CT-NN    70.00    108.70
+CE-CF-NN    70.00    111.40
+C -CI-NN    70.00    107.00
+C -CP-NN    70.00    108.70
+CA-CA-CI    70.00    120.00
+C -CE-CA    63.00    134.90
+NN-CT-CA    63.00    114.00
+C -CI-CA    63.00    109.40
+CT-CI-CA    63.00    112.00
+CT-CI-C     63.00    111.10
+CE-C -CT    63.00    106.40
+CE-C -CI    63.00    106.40
+C -CE-CF    63.00    108.00
+NN-CI-CA    63.00    109.00
+CF-CE-CA    63.00    116.20
+CF-CA-CA    63.00    120.00
+CE-CA-CA    63.00    120.00
+CE-CF-CA    63.00    122.70
+CT-CP-C     63.00    111.10
+CP-C -CT    63.00    106.40
+NN-CT-H1    61.12    106.30
+CT-CT-NN    60.00    107.50
+CT-CI-NN    60.00    107.50
+CT-CP-NN    60.00    107.50
+CT-NN-CT    52.60    120.80
+CF-NN-CT    52.60    120.80
+CP-NN-CT    52.60    120.80
+CF-NN-CI    52.60    110.00
+HN-CT-CT    50.00    109.50
+HN-CT-CP    50.00    109.50
+HC-CT-CI    50.00    109.50
+CT-NN-CX    50.00    109.50
+NN-CX-NN    50.00    109.00
+NN-CX-CT    50.00    109.50
+NT-CT-HP    50.00    109.50
+CX-CT-HC    50.00    109.50
+CE-CA-HA    50.00    120.00
+CF-CA-HA    50.00    120.00
+HN-CT-HN    35.00    109.50
+CT-CP-CT    40.00    109.50
+LP-ON-NN    600.0    120.00
+LP-ON-LP    600.0    120.00
+c -CT-CT    65.31    111.04
+CT-c -o     84.55    123.20
+CT-c -os    86.42    110.72
+c -CT-HC    47.41    108.77
+
+DIHEDRAL
+X -CX-NN-X      4  14.50   180  2
+X -CF-NN-X      4  6.000   180  2
+X -CI-CT-X      9  1.400   0.0  3
+X -CP-CT-X      9  1.400   0.0  3
+X -CI-CA-X      6  0.000   0.0  2
+X -C -CI-X      6  0.000   0.0  2
+X -C -CP-X      6  0.000   0.0  2
+X -NN-CI-X      6  0.000   0.0  3
+X-NN-CP-X       6  0.204   0.0  3
+X-NN-CT-X       6  0.204   0.0  3
+X -CA-CE-X      4  14.00   180  2
+X -C -CE-X      4  12.00   180  2
+X -CA-CF-X      4  14.50   180  2
+X -CE-CF-X      4  12.00   180  2
+X -NN-ON-LP     2  0.000   180  2
+ON-NN-CP-C      1  0.260   0.0  3 
+ON-NN-CP-CT     1  0.260   0.0  3 
+ON-NN-CT-H1     1  0.260   0.0  3 
+CT-NN-CT-H1     1  0.000   0.0  3 
+CT-NN-CT-CX     1  0.000   0.0  3 
+CT-NN-CP-C      1  0.000   0.0  3 
+CX-NN-CT-H1     1  0.100   0.0  3 
+NN-CT-CT-HN     1  0.100   0.0  3 
+NN-CT-CT-HC     1  0.100   0.0  3 
+NN-CX-CT-HC     1  0.100   0.0  3 
+NN-CI-CT-HC     1  0.100   0.0  3 
+NN-CT-CT-CT     1  0.143   0.0  3 
+NN-CP -C-CT     1  0.000   0.0  2 
+HN-CT-CT-CT     1  0.160   0.0  3
+CF-NN-CI-C      1  1.500   180  2
+CE-C -CI-NN     1  1.500   180  2
+C -CI-NN-ON     1  1.500   180  2
+O -C -CI-NN     1  1.500   180  2
+HC-CT-c-o
+CT-CT-c-o
+X -c -CT-X      6  0.000   180  2
+
+IMPROPER TORSIONS
+X -CT-NN-CX        1.10        180.          2.
+CE-CI-C-O          1.10        180           2.
+CA-CA-CA-CI        1.10        180.          2.
+CF-CA-CE-C         1.10        180.          2.
+CA-CE-CF-NN        1.10        180.          2.
+LP-LP-ON-NN       10.10        180.          2.
+NN-NN-CX-CT       10.10        180.          2.
+
+
+NONBON
+HN      1.43    0.0157
+NN      1.90    0.2627
+ON      1.6750  0.2445
+CF      1.9080  0.0860
+CE      1.9080  0.0860
+CI      1.9080  0.0860
+CX      1.9080  0.0860
+CP      1.9080  0.1094
+LP      0.00    0.0000
+
+HBOND
+HN-OW   0.6000  0.0157
+ON-OW   1.7500  0.2445
